@@ -1,3 +1,4 @@
+// Last updated: 2025-10-10T21:52:07-07:00
 bool isSubsequence(char * s, char * t){
     int i = 0, j = 0;
 
