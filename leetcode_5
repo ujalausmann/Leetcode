@@ -1,3 +1,4 @@
+// Last updated: 2025-11-02T21:41:43-08:00
 // Last updated: 2025-11-02T21:41:22-08:00
 // Last updated: 2025-11-03T21:41:02-08:00
 bool isAnagram(char * s, char * t){
