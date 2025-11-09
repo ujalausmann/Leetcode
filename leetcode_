@@ -1,0 +1,12 @@
+// Last updated: 2025-11-08T21:37:12-08:00
+void reverseString(char* s, int sSize) {
+    int i;
+    char temp;
+
+    
+    for(i = 0; i < sSize/2; i++) {  
+        temp = s[i];
+        s[i] = s[sSize - i - 1];
+        s[sSize - i - 1] = temp;
+    }
+}
