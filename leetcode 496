@@ -1,0 +1,22 @@
+int* nextGreaterElement(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize){
+    *returnSize = nums1Size;
+    int* result = (int*)malloc(nums1Size * sizeof(int));
+
+    for (int i = 0; i < nums1Size; i++) {
+        int target = nums1[i];
+        int found = 0, ans = -1;
+
+        for (int j = 0; j < nums2Size; j++) {
+            if (nums2[j] == target) {
+                found = 1;
+            } else if (found && nums2[j] > target) {
+                ans = nums2[j];
+                break;
+            }
+        }
+
+        result[i] = ans;
+    }
+
+    return result;
+}
