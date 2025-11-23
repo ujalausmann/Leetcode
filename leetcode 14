@@ -1,0 +1,22 @@
+char* longestCommonPrefix(char** strs, int strsSize) {
+    if (strsSize == 0) return "";
+
+    int index = 0;
+
+    while (1) {
+        char c = strs[0][index];   // take character from first string
+
+        if (c == '\0') break;      // reached end of first string
+
+        for (int i = 1; i < strsSize; i++) {
+            if (strs[i][index] != c || strs[i][index] == '\0') {
+                strs[0][index] = '\0';   // end prefix here
+                return strs[0];
+            }
+        }
+
+        index++;
+    }
+
+    return strs[0];
+}
