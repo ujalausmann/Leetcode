@@ -1,3 +1,4 @@
+// Last updated: 2025-11-22T21:30:09-08:00
 int* plusOne(int* digits, int digitsSize, int* returnSize) {
     int carry = 1; // we want to add 1
     int* result = (int*)malloc((digitsSize + 1) * sizeof(int));
