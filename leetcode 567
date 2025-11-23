@@ -1,0 +1,13 @@
+bool checkInclusion(char * s1, char * s2){
+    int count[26] = {0}, window[26] = {0};
+    for(int i=0; s1[i]; i++) count[s1[i]-'a']++;
+    int len1 = strlen(s1), len2 = strlen(s2);
+    for(int i=0; i<len2; i++){
+        window[s2[i]-'a']++;
+        if(i >= len1) window[s2[i-len1]-'a']--;
+        int j;
+        for(j=0;j<26;j++) if(window[j] != count[j]) break;
+        if(j == 26) return true;
+    }
+    return false;
+}
