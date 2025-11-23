@@ -1,0 +1,32 @@
+char* reverseWords(char* s) {
+    int start = 0, end = 0;
+
+    while (s[end] != '\0') {
+        // find the end of the current word
+        if (s[end] == ' ') {
+            // reverse the word s[start ... end-1]
+            int left = start, right = end - 1;
+            while (left < right) {
+                char temp = s[left];
+                s[left] = s[right];
+                s[right] = temp;
+                left++;
+                right--;
+            }
+            start = end + 1; // next word starts after the space
+        }
+        end++;
+    }
+
+    // reverse the last word (because it won't end with space)
+    int left = start, right = end - 1;
+    while (left < right) {
+        char temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+        left++;
+        right--;
+    }
+
+    return s;
+}
