@@ -1,3 +1,4 @@
+// Last updated: 2025-11-24T09:34:25+05:00
 // Last updated: 2025-11-24T09:26:08+05:00
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){
     int *ans = malloc(2 * sizeof(int));
